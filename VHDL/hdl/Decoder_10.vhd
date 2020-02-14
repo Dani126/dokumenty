@@ -1,0 +1,118 @@
+-- Decoder_10.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Decoder_10 is 
+    port(
+        data : in integer range 0 to 99;
+        segH,segL: out std_logic_vector(3 downto 0)
+        );
+end Decoder_10;
+architecture struct of Decoder_10 is
+begin
+    process(data)
+    begin
+        case data is              --ABCDEFG
+            when 0 => segH <= x"0"; segL <= x"0";
+            when 1 => segH <= x"0"; segL <= x"1";
+            when 2 => segH <= x"0"; segL <= x"2";
+            when 3 => segH <= x"0"; segL <= x"3";
+            when 4 => segH <= x"0"; segL <= x"4";
+            when 5 => segH <= x"0"; segL <= x"5";
+            when 6 => segH <= x"0"; segL <= x"6";
+            when 7 => segH <= x"0"; segL <= x"7";
+            when 8 => segH <= x"0"; segL <= x"8";
+            when 9 => segH <= x"0"; segL <= x"9";
+            when 10 => segH <= x"1"; segL <= x"0";
+            when 11 => segH <= x"1"; segL <= x"1";
+            when 12 => segH <= x"1"; segL <= x"2";
+            when 13 => segH <= x"1"; segL <= x"3";
+            when 14 => segH <= x"1"; segL <= x"4";
+            when 15 => segH <= x"1"; segL <= x"5";
+            when 16 => segH <= x"1"; segL <= x"6";
+            when 17 => segH <= x"1"; segL <= x"7";
+            when 18 => segH <= x"1"; segL <= x"8";
+            when 19 => segH <= x"1"; segL <= x"9";
+            when 20 => segH <= x"2"; segL <= x"0";
+            when 21 => segH <= x"2"; segL <= x"1";
+            when 22 => segH <= x"2"; segL <= x"2";
+            when 23 => segH <= x"2"; segL <= x"3";
+            when 24 => segH <= x"2"; segL <= x"4";
+            when 25 => segH <= x"2"; segL <= x"5";
+            when 26 => segH <= x"2"; segL <= x"6";
+            when 27 => segH <= x"2"; segL <= x"7";
+            when 28 => segH <= x"2"; segL <= x"8";
+            when 29 => segH <= x"2"; segL <= x"9";
+            when 30 => segH <= x"3"; segL <= x"0";
+            when 31 => segH <= x"3"; segL <= x"1";
+            when 32 => segH <= x"3"; segL <= x"2";
+            when 33 => segH <= x"3"; segL <= x"3";
+            when 34 => segH <= x"3"; segL <= x"4";
+            when 35 => segH <= x"3"; segL <= x"5";
+            when 36 => segH <= x"3"; segL <= x"6";
+            when 37 => segH <= x"3"; segL <= x"7";
+            when 38 => segH <= x"3"; segL <= x"8";
+            when 39 => segH <= x"3"; segL <= x"9";
+            when 40 => segH <= x"4"; segL <= x"0";
+            when 41 => segH <= x"4"; segL <= x"1";
+            when 42 => segH <= x"4"; segL <= x"2";
+            when 43 => segH <= x"4"; segL <= x"3";
+            when 44 => segH <= x"4"; segL <= x"4";
+            when 45 => segH <= x"4"; segL <= x"5";
+            when 46 => segH <= x"4"; segL <= x"6";
+            when 47 => segH <= x"4"; segL <= x"7";
+            when 48 => segH <= x"4"; segL <= x"8";
+            when 49 => segH <= x"4"; segL <= x"9";
+            when 50 => segH <= x"5"; segL <= x"0";
+            when 51 => segH <= x"5"; segL <= x"1";
+            when 52 => segH <= x"5"; segL <= x"2";
+            when 53 => segH <= x"5"; segL <= x"3";
+            when 54 => segH <= x"5"; segL <= x"4";
+            when 55 => segH <= x"5"; segL <= x"5";
+            when 56 => segH <= x"5"; segL <= x"6";
+            when 57 => segH <= x"5"; segL <= x"7";
+            when 58 => segH <= x"5"; segL <= x"8";
+            when 59 => segH <= x"5"; segL <= x"9";
+            when 60 => segH <= x"6"; segL <= x"0";
+            when 61 => segH <= x"6"; segL <= x"1";
+            when 62 => segH <= x"6"; segL <= x"2";
+            when 63 => segH <= x"6"; segL <= x"3";
+            when 64 => segH <= x"6"; segL <= x"4";
+            when 65 => segH <= x"6"; segL <= x"5";
+            when 66 => segH <= x"6"; segL <= x"6";
+            when 67 => segH <= x"6"; segL <= x"7";
+            when 68 => segH <= x"6"; segL <= x"8";
+            when 69 => segH <= x"6"; segL <= x"9";
+            when 70 => segH <= x"7"; segL <= x"0";
+            when 71 => segH <= x"7"; segL <= x"1";
+            when 72 => segH <= x"7"; segL <= x"2";
+            when 73 => segH <= x"7"; segL <= x"3";
+            when 74 => segH <= x"7"; segL <= x"4";
+            when 75 => segH <= x"7"; segL <= x"5";
+            when 76 => segH <= x"7"; segL <= x"6";
+            when 77 => segH <= x"7"; segL <= x"7";
+            when 78 => segH <= x"7"; segL <= x"8";
+            when 79 => segH <= x"7"; segL <= x"9";
+            when 80 => segH <= x"8"; segL <= x"0";
+            when 81 => segH <= x"8"; segL <= x"1";
+            when 82 => segH <= x"8"; segL <= x"2";
+            when 83 => segH <= x"8"; segL <= x"3";
+            when 84 => segH <= x"8"; segL <= x"4";
+            when 85 => segH <= x"8"; segL <= x"5";
+            when 86 => segH <= x"8"; segL <= x"6";
+            when 87 => segH <= x"8"; segL <= x"7";
+            when 88 => segH <= x"8"; segL <= x"8";
+            when 89 => segH <= x"8"; segL <= x"9";
+            when 90 => segH <= x"9"; segL <= x"0";
+            when 91 => segH <= x"9"; segL <= x"1";
+            when 92 => segH <= x"9"; segL <= x"2";
+            when 93 => segH <= x"9"; segL <= x"3";
+            when 94 => segH <= x"9"; segL <= x"4";
+            when 95 => segH <= x"9"; segL <= x"5";
+            when 96 => segH <= x"9"; segL <= x"6";
+            when 97 => segH <= x"9"; segL <= x"7";
+            when 98 => segH <= x"9"; segL <= x"8";
+            when others => segH<= x"9"; segL <=x"9";
+            end case;
+    end process;
+end struct;
